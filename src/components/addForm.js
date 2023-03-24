@@ -6,7 +6,7 @@ export const Form = (props) => {
   const [name, setname] = useState("");
   const [desc, setdesc] = useState("");
   const [price, setprice] = useState("");
-//   const [image, setimage] = useState();
+  const [image, setimage] = useState("");
   const submit = (e) => {
     e.preventDefault();
     console.log(name, desc, price);
@@ -55,16 +55,16 @@ export const Form = (props) => {
         placeholder="Price.."
       />
 
-      {/* <div className="imgurl">
+      <div className="imgurl">
         <label htmlFor="image">Image for Book</label>
         <input
           type="file"
           name="image"
           id="image"
           value={image}
-          onChange={(e) => setimage(e.target.files[0])}
+          onChange={(e) => console.log(e.target.files)}
         />
-      </div> */}
+      </div>
       <input type="submit" value="Submit"></input>
     </form>
   );

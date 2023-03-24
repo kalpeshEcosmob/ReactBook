@@ -14,7 +14,6 @@ function App() {
 
   const fetchData = () => {
     axios.get("http://172.16.16.147:3100/listbook").then((responses) => {
-      console.log("response->", responses.data.data);
       setdata(responses.data.data);
     });
   };
